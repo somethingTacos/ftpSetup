@@ -25,7 +25,7 @@ def printTag(message, tag, color):
         print(bcolors.ENDC + "[ " + bcolors.WARNING + tag + bcolors.ENDC + " ] " + message)
     return;
 def bashrcAlter():
-    me = os.system("whoami")
+    me = os.system("who am i | awk '{print $1}'")
     os.system("cat blah >> /home/{0}/.bashrc".format(me))
     os.system('source /home/{0}/.bashrc'.format(me))
     return;
