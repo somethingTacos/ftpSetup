@@ -27,7 +27,7 @@ def printTag(message, tag, color):
 def bashrcAlter():
     me = os.environ['SUDO_USER']
     os.system("cat blah >> /home/{0}/.bashrc".format(me))
-    os.system('source /home/{0}/.bashrc'.format(me))
+    os.system("source /home/{0}/.bashrc".format(me))
     return;
 def updateAll():
     print(bcolors.WARNING + "Starting System update..." + bcolors.ENDC)
