@@ -99,7 +99,7 @@ if start == "y":
     os.system('rm info.py')
     newUserName = input("Enter a new username for ftponly user: " )
     os.system("adduser {0}".format(newUserName))
-    if updatePlox == "y"
+    if updatePlox == "y":
         updateAll()
     startInstall()
     if altBRC == "y":
