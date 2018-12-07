@@ -84,7 +84,7 @@ def startInstall():
     printTag("vsftpd config","DONE","GREEN")
     #add ftponly shell
     print(bcolors.HEADER + "Adding ftponly shell..." + bcolors.ENDC)
-    os.system('echo "{0}" >> /bin/vsftpd.userlist'.format(newUserName))
+    os.system('echo "{0}" >> /etc/vsftpd.userlist'.format(newUserName))
     os.system('echo "#!/bin/sh" > /bin/ftponly')
     os.system('echo "This user can only be used for FTP" >> /bin/ftponly')
     os.system("chmod a+x /bin/ftponly")
