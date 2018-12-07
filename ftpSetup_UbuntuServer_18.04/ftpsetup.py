@@ -29,7 +29,7 @@ def bashrcAlter():
     os.system("echo '' >> /home/{0}/.bashrc".format(me))
     line1 = "THEIP=$(ifconfig | grep 'inet '| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $2}')"
     line2 = 'PS1="\[\\033[01;31m\]\\u@"$THEIP" \w $\[\\033[00m\] ";'
-    bashrc_file = "/home/{0}/.bashrc".format(newUserName)
+    bashrc_file = "/home/{0}/.bashrc".format(me)
 
     with open(bashrc_file,"a") as textFile:
         print("{}".format(line1), file=textFile)
