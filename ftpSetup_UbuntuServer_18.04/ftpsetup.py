@@ -27,7 +27,8 @@ def printTag(message, tag, color):
 def bashrcAlter():
     me = os.environ['SUDO_USER']
     os.system("echo "" >> /home/{0}/.bashrc".format(me))
-    os.system("cat blah >> /home/{0}/.bashrc".format(me))
+    os.system(echo "THEIP=$(ifconfig | grep 'inet '| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $2}')" >> /home/{0}/.bashrc".format(me))
+    os.system(echo 'PS1="\[\033[01;31m\]\u@"$THEIP" \w $\[\033[00m\] ";' >> /home/{0}/.bashrc".format(me))          
     print()
     print("You will need to source the .bashrc file, or\n wait for you next reboot to see the new custom prompt")
     return;
