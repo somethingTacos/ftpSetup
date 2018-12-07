@@ -25,8 +25,9 @@ def printTag(message, tag, color):
         print(bcolors.ENDC + "[ " + bcolors.WARNING + tag + bcolors.ENDC + " ] " + message)
     return;
 def bashrcAlter():
-    os.system("cat blah >> /home/{0}/.bashrc".format(whoami))
-    os.system('source /home/{0}/.bashrc'.format(whoami))
+    me = os.system("whoami")
+    os.system("cat blah >> /home/{0}/.bashrc".format(me))
+    os.system('source /home/{0}/.bashrc'.format(me))
     return;
 def startInstall():
     #update system
