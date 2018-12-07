@@ -55,7 +55,7 @@ def startInstall():
         print(bcolors.OKGREEN + "vsftpd is installed  :)" + bcolors.ENDC)
     else:
         print(bcolors.FAIL + "vsftpd needs to be installed..." + bcolors.ENDC)
-        os.system("apt-get install vsftpd -y")
+        os.system("apt install vsftpd -y")
         printTag("Installing vsftpd","Done","GREEN")
 
         
