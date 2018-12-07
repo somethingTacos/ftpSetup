@@ -32,8 +32,8 @@ def bashrcAlter():
     bashrc_file = "/home/{0}/.bashrc".format(newUserName)
 
     with open(bashrc_file,"a") as textFile:
-        print("{}.format(line1), file=textFile)
-        print("{}.format(line2), file=textFile)
+        print("{}".format(line1), file=textFile)
+        print("{}".format(line2), file=textFile)
         
     print()
     print("You will need to source the .bashrc file, or\n wait for you next reboot to see the new custom prompt")
