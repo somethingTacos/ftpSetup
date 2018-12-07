@@ -26,8 +26,10 @@ def printTag(message, tag, color):
     return;
 def bashrcAlter():
     me = os.environ['SUDO_USER']
+    os.system("echo "" >> /home/{0}/.bashrc".format(me))
     os.system("cat blah >> /home/{0}/.bashrc".format(me))
-    os.system("source /home/{0}/.bashrc".format(me))
+    print()
+    print("You will need to source the .bashrc file, or\n wait for you next reboot to see the new custom prompt")
     return;
 def updateAll():
     print(bcolors.WARNING + "Starting System update..." + bcolors.ENDC)
