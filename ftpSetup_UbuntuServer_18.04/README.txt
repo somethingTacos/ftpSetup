@@ -5,4 +5,6 @@ This is what's going to happen... maybe...
 - vsftpdl.conf will be replaced
 - ufw will be enabled and ports 20,21,990,40000-50000 (all tpc) will allow traffic
 - some files will be created/altered: vsftpd.conf(alt), vsftpd.userlist(add), /bin/ftponly(add), /etc/shells(alt)
-I'm probably forgetting something, but whatever...
+I'm probably forgetting something, but whatever.
+
+   !!! RUN THIS AT YOUR OWN RISK !!!
