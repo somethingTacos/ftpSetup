@@ -53,6 +53,7 @@ def startInstall():
     #configure firewall
     print(bcolors.HEADER + "Adding Firewall rules..." + bcolors.ENDC)
     os.system("cp /etc/vsftpd.conf /etc/vsftpd.conf.orig")
+    os.system("ufw enable")
     os.system("ufw allow 20/tcp")
     os.system("ufw allow 21/tcp")
     os.system("ufw allow 990/tcp")
