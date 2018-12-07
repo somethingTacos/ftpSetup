@@ -29,8 +29,7 @@ def bashrcAlter():
     os.system("cat blah >> /home/{0}/.bashrc".format(me))
     os.system('source /home/{0}/.bashrc'.format(me))
     return;
-def startInstall():
-    #update system
+def updateAll():
     print(bcolors.WARNING + "Starting System update..." + bcolors.ENDC)
     print(bcolors.HEADER + "Syncing package indexes..." + bcolors.ENDC)
     os.system("apt-get update -y")
@@ -41,7 +40,8 @@ def startInstall():
     print()
     printTag("System Update","DONE","GREEN")
     print()
-
+    return;
+def startInstall():
     if vsftpd_installed == 1:
         print(bcolors.OKGREEN + "vsftpd is installed  :)" + bcolors.ENDC)
     else:
@@ -89,15 +89,18 @@ def startInstall():
     return;
 
 #continue?
-start = input("Start? (y/[n]) ")
+start = input("Start? (y/[n]): ")
 if start == "y":
-    altBRC = input("Append new PS1 format to bashrc file?\nExample: <name>@<IP> <working dir>\nAppend(y/[n])?")
+    altBRC = input("\nAppend new PS1 format to bashrc file?\n\nExample: <name>@<IP> <working dir>\n\nAppend? (y/[n]): ")
+    updatePlox = input("\nUpdate All the things? (y/[n]): ")
     print("Starting Intallation...")
     os.system("./check.sh")
     from info import *
     os.system('rm info.py')
     newUserName = input("Enter a new username for ftponly user: " )
     os.system("adduser {0}".format(newUserName))
+    if updatePlox == "y"
+        updateAll()
     startInstall()
     if altBRC == "y":
         bashrcAlter()
