@@ -36,7 +36,7 @@ def bashrcAlter():
         print("{}".format(line2), file=textFile)
         
     print()
-    print("You will need to source the .bashrc file, or\n wait for you next reboot to see the new custom prompt")
+    print("You will need to source the .bashrc file, or\n wait for your next reboot to see the new custom prompt")
     return;
 def updateAll():
     print(bcolors.WARNING + "Starting System update..." + bcolors.ENDC)
