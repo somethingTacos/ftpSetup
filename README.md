@@ -8,3 +8,4 @@ This was made for Ubuntu Server 18.04
 
 
 Self reminder: You can wget this at https://www.github.com/somethingTacos/ftpSetup/archive/master.zip
+             : make sure the make check.sh executable, and run the python script with root permissions
